@@ -5,7 +5,7 @@
    * Revisão MER,SQL.
    * Projeto de Banco de Dados:
        * Dependência funcional
-      * 
+ 
 ## Avaliação
    * 20/06/2017 P1
    * 27/06/2017 T1
