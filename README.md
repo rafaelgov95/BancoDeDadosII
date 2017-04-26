@@ -1,2 +1,5 @@
-# BancoDeDadosII
-Repositorio da materia UFMS 2017
+# Banco De Dados II
+ * Revisão MER,SQL.
+ * Projeto de Banco de Dados:
+    * Dependência funcional
+    * 
