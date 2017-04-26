@@ -1,2 +1,3 @@
 # Aula I
+ * Date 25/04/2017
  * Apresentação da Materia e discução sobre método de ensino, e escolha de SGBD Oracle .
