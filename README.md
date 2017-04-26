@@ -1,7 +1,7 @@
 # Banco De Dados II
-Docente: Juliana
-Ano: 2017
-   Ementa da materia durante o semestre.
+* Docente: Juliana
+* Ano: 2017
+   * Ementa da materia durante o semestre.
    * Revisão MER,SQL.
    * Projeto de Banco de Dados:
        * Dependência funcional
