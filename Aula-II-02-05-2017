@@ -1,12 +1,20 @@
 # Aula II
 ## Poefessora Juliana UFMS CPCXP 
-Data 02/05/2107
- * Revisão Banco de Dados I, com apresentação de Slides. 
-    * O que é Banco De Dados ? 
-    * O que é SGBD ?
-    * O que é modelo de dados ?
-    * O que é um Esquema de Dados ?
-    * Instancia X Esquema diferenças !
-    * Estado de um bac de dadis !
-    * Esquema x Estado diferenças !
-    * Arquitetura - Três Niveis !
+- Data 02/05/2107
+  * Revisão Banco de Dados I, com apresentação de Slides. 
+     * O que é Banco De Dados ? 
+     * O que é SGBD ?
+     * O que é modelo de dados ?
+     * O que é um Esquema de Dados ?
+     * Instancia X Esquema diferenças !
+     * Estado de um bac de dadis !
+     * Esquema x Estado diferenças !
+     * Arquitetura - Três Niveis !
+       - Nevel Externo
+       - Nivel Conceitual
+       - Nivel Interno
+     * O que é Projeto de Banco de Dados ?
+       - É Atividade de Modelagem de dados em Diversos Niveis de Abstrações
+        * Abordagem Top-Down
+       
+       
