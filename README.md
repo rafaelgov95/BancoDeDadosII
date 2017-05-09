@@ -1,8 +1,8 @@
 # Banco De Dados II
 * Docente: Juliana
 * Ano: 2017
-   * Aula I - [LINK AULA](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-I-25-04-2017.md)
-   * Aula II - [LINK AULA](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-II-02-05-2017.md)
+   * Aula I - [LINK](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-I-25-04-2017.md)
+   * Aula II - [LINK](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-II-02-05-2017.md)
 
 ## Avaliação
    * 20/06/2017 P1
