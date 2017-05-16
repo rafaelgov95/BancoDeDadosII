@@ -4,6 +4,8 @@
    * Aula I - [LINK](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-I-25-04-2017.md)
    * Aula II - [LINK](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-II-02-05-2017.md)
    * Aula III - [LINK](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-III-09-05-2017.md)
+   * Aula IV - [LINK](https://github.com/rafaelgov95/BancoDeDadosII/blob/master/Aula-IV-16-05-2017.md)
+
 ## Avaliação
    * 20/06/2017 P1
    * 27/06/2017 T1
