@@ -388,6 +388,89 @@ sumario=tradicional
 \end{enumerate}
 	
 		
+	\section{Buscas}
+	 
+	 \begin{enumerate}
+	 	\item  Recuperar o nome e endereço dos alunos que
+	 	são do estado do Rio de Janeiro (uf = 'RJ').
+	 	\begin{verbatim}
+	 		
+	 		select nome_aluno, endereco_aluno from alunos where uf='RJ';
+	 	\end{verbatim}
+	 		\begin{center}
+	 		\begin{figure}[H]
+	 			\centering
+	 			\includegraphics[scale=0.5]{./at-06.png}
+	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\label{rota-1}
+	 		\end{figure}
+	 	\end{center}
+	 	
+	 	\item  Recuperar o nome de todos os instrutores e a
+	 	data de admissão.
+	 	\begin{verbatim}
+		     	select nome_instrutor, admissao from instrutores;
+	 	\end{verbatim}
+	 	\begin{center}
+	 		\begin{figure}[H]
+	 			\centering
+	 			\includegraphics[scale=0.5]{./at-07.png}
+	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\label{rota-1}
+	 		\end{figure}
+	 	\end{center}
+	 	
+	 	
+	 	 	
+	 	\item  Recuperar o nome do curso e o cod\_turma de
+	 	cada turma.
+	 	\begin{verbatim}
+select c.nome_curso,t.cod_turma from turmas t, cursos c where
+ t.cod_curso=c.cod_curso;
+	 	\end{verbatim}
+	 	\begin{center}
+	 		\begin{figure}[H]
+	 			\centering
+	 			\includegraphics[scale=0.5]{./at-08.png}
+	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\label{rota-1}
+	 		\end{figure}
+	 	\end{center}
+	 	
+	 	
+	 	\item  Recuperar o nome e o telefone dos instrutores
+	 	de 'Fundamentos da Modelagem de Dados'.
+	 	\begin{verbatim}
+	 	select c.nome_curso,t.cod_turma from turmas t, cursos c where
+	 	t.cod_curso=c.cod_curso;
+	 	\end{verbatim}
+	 	\begin{center}
+	 		\begin{figure}[H]
+	 			\centering
+	 			\includegraphics[scale=0.5]{./at-08.png}
+	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\label{rota-1}
+	 		\end{figure}
+	 	\end{center}
+	 		\item  Recuperar o nome do aluno, sua nota e o nome
+	 		do instrutor, do curso de 'Redes I'.
+	 	\begin{verbatim}
+	 	select c.nome_curso,t.cod_turma from turmas t, cursos c where
+	 	t.cod_curso=c.cod_curso;
+	 	\end{verbatim}
+	 	\begin{center}
+	 		\begin{figure}[H]
+	 			\centering
+	 			\includegraphics[scale=0.5]{./at-08.png}
+	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\label{rota-1}
+	 		\end{figure}
+	 	\end{center}
+	 	
+	 	
+ 	\end{enumerate}
+	 	
+
 
 	
 	
