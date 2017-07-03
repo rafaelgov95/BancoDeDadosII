@@ -184,7 +184,7 @@ sumario=tradicional
 					\begin{figure}[H]
 						\centering
 						\includegraphics[scale=0.5]{./at-01.png}
-						\caption{Inicio de sondagem com um hospedeiro alvo.}
+						\caption{Inserir 10 Instrutores.}
 						\label{rota-1}
 					\end{figure}
 				\end{center}
@@ -232,7 +232,7 @@ sumario=tradicional
 				\begin{figure}[H]
 					\centering
 					\includegraphics[scale=0.5]{./at-02.png}
-					\caption{Inicio de sondagem com um hospedeiro alvo.}
+					\caption{Inserir 10 Cursos.}
 					\label{rota-1}
 				\end{figure}
 			\end{center}
@@ -296,7 +296,7 @@ sumario=tradicional
 				\begin{figure}[H]
 					\centering
 					\includegraphics[scale=0.5]{./at-03.png}
-					\caption{Inicio de sondagem com um hospedeiro alvo.}
+					\caption{Inserir 10 Alunos.}
 					\label{rota-1}
 				\end{figure}
 			\end{center}
@@ -323,7 +323,7 @@ sumario=tradicional
 			\begin{figure}[H]
 				\centering
 				\includegraphics[scale=0.5]{./at-04.png}
-				\caption{Inicio de sondagem com um hospedeiro alvo.}
+				\caption{Inserir 5 Turmas}
 				\label{rota-1}
 			\end{figure}
 		\end{center}
@@ -381,7 +381,7 @@ sumario=tradicional
 			\begin{figure}[H]
 				\centering
 				\includegraphics[scale=0.5]{./at-05.png}
-				\caption{Inicio de sondagem com um hospedeiro alvo.}
+				\caption{Inserir 15 Historicos.}
 				\label{rota-1}
 			\end{figure}
 		\end{center}
@@ -401,7 +401,8 @@ sumario=tradicional
 	 		\begin{figure}[H]
 	 			\centering
 	 			\includegraphics[scale=0.5]{./at-06.png}
-	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\caption{Recuperar o nome e endereço dos alunos que
+	 				são do estado do Rio de Janeiro (uf = 'RJ').}
 	 			\label{rota-1}
 	 		\end{figure}
 	 	\end{center}
@@ -415,7 +416,8 @@ sumario=tradicional
 	 		\begin{figure}[H]
 	 			\centering
 	 			\includegraphics[scale=0.5]{./at-07.png}
-	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\caption{Recuperar o nome de todos os instrutores e a
+	 				data de admissão.}
 	 			\label{rota-1}
 	 		\end{figure}
 	 	\end{center}
@@ -432,7 +434,8 @@ select c.nome_curso,t.cod_turma from turmas t, cursos c where
 	 		\begin{figure}[H]
 	 			\centering
 	 			\includegraphics[scale=0.5]{./at-08.png}
-	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\caption{Recuperar o nome do curso e o cod\_turma de
+	 				cada turma.}
 	 			\label{rota-1}
 	 		\end{figure}
 	 	\end{center}
@@ -441,28 +444,32 @@ select c.nome_curso,t.cod_turma from turmas t, cursos c where
 	 	\item  Recuperar o nome e o telefone dos instrutores
 	 	de 'Fundamentos da Modelagem de Dados'.
 	 	\begin{verbatim}
-	 	select c.nome_curso,t.cod_turma from turmas t, cursos c where
-	 	t.cod_curso=c.cod_curso;
+	 select i.nome_instrutor,i.tel_instrutor from instrutores i, turmas t
+	 where i.cod_instrutor = t.cod_instrutor and t.cod_curso =2;
 	 	\end{verbatim}
 	 	\begin{center}
 	 		\begin{figure}[H]
 	 			\centering
-	 			\includegraphics[scale=0.5]{./at-08.png}
-	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\includegraphics[scale=0.5]{./at-10.png}
+	 			\caption{Recuperar o nome e o telefone dos instrutores
+	 				de 'Fundamentos da Modelagem de Dados'.}
 	 			\label{rota-1}
 	 		\end{figure}
 	 	\end{center}
 	 		\item  Recuperar o nome do aluno, sua nota e o nome
 	 		do instrutor, do curso de 'Redes I'.
 	 	\begin{verbatim}
-	 	select c.nome_curso,t.cod_turma from turmas t, cursos c where
-	 	t.cod_curso=c.cod_curso;
+		select a.nome_aluno, h.nota, i.nome_instrutor from alunos a,
+	historico h, instrutores i, turmas t where a.matricula =
+	h.matricula and h.cod_turma = t.cod_turma and t.cod_instrutor =
+	i.cod_instrutor and t.cod_curso=3;
 	 	\end{verbatim}
 	 	\begin{center}
 	 		\begin{figure}[H]
 	 			\centering
-	 			\includegraphics[scale=0.5]{./at-08.png}
-	 			\caption{Inicio de sondagem com um hospedeiro alvo.}
+	 			\includegraphics[scale=0.5]{./at-09.png}
+	 			\caption{Recuperar o nome do aluno, sua nota e o nome
+	 				do instrutor, do curso de 'Redes I'.}
 	 			\label{rota-1}
 	 		\end{figure}
 	 	\end{center}
