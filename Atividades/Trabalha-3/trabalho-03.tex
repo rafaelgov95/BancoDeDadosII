@@ -157,8 +157,8 @@ sumario=tradicional
 			data DATE,
 			codForn INT NOT NULL,
 			codPeca INT NOT NULL,
-			FOREIGN codPeca REFERENCES Peca(codPeca),
-			FOREIGN codForm REFERENCES Fornecedor(codigo)
+			FOREIGN KEY codPeca REFERENCES Peca(codPeca),
+			FOREIGN KEY codForm REFERENCES Fornecedor(codigo)
 			);
 			
 			CREATE TABLE Peca ( 
