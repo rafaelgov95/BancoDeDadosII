@@ -63,7 +63,7 @@ sumario=tradicional
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Atividade VI }
+\titulo{Atividade VIII}
 \autor{ Rafael Gonçalves de Oliveira Viana}
 \local{Brasil}
 \data{2017}
@@ -143,141 +143,30 @@ sumario=tradicional
 	% página de titulo
 	\maketitle
 	\begin{enumerate}
-		\item Crie uma view que informe o quanto cada instrutor
-		arrecadou.
+		\item Procedure Alimenta Historico Forall
 				\begin{verbatim}
-create or replace view arrecadou as select i.cod_instrutor, i.nome_instrutor,
-sum(t.preco_hora_instrutor*c.carga_horaria) arrecadado from
-instrutores i, turmas t, cursos c 
-where i.cod_instrutor = t.cod_instrutor AND
-c.cod_curso = t.cod_curso AND
-t.preco_hora_instrutor <> 0 group 
-by i.nome_instrutor, i.cod_instrutor  order by arrecadado;
-				\end{verbatim}
-				
-				\begin{center}
-					\begin{figure}[H]
-						\centering
-						\includegraphics[scale=0.5]{./imagens/at-01.png}
-						\caption{View criada.}
-						\label{rota-1}
-					\end{figure}
-				\end{center}
-				\begin{verbatim}
-		select * from arrecadou;
-			\end{verbatim}
-			
-				\begin{center}
-				\begin{figure}[H]
-					\centering
-					\includegraphics[scale=0.5]{./imagens/at-02.png}
-					\caption{View selecionada.}
-					\label{rota-1}
-				\end{figure}
-			\end{center}
-			
-						\item  Monte uma view que revele alunos, cursos e total
-						pago por cada um.
-						\begin{verbatim}
-
-		create or replace view pagamento as
-		select a.nome_aluno, c.nome_curso, sum(c.preco) total
-		from alunos a, cursos c, historico h, turmas t
-		where a.matricula = h.matricula and 
-		h.cod_turma = t.cod_turma and
-		c.cod_curso = t.cod_curso
-		group by a.nome_aluno, c.nome_curso
-		having sum(c.preco)>0;
-						\end{verbatim}
-						
-						\begin{center}
-							\begin{figure}[H]
-								\centering
-								\includegraphics[scale=0.5]{./imagens/at-03.png}
-								\caption{View criada.}
-								\label{rota-1}
-							\end{figure}
-						\end{center}
+		
+			 create or replace function ValorEmDolar
+			 (reais in number, cotacao in number)
+			 return number
+			 is
+			 begin
+			 return reais/cotacao;
+			 end;
+			 \end{verbatim}
+			 \begin{center}
+			 	\begin{figure}[H]
+			 		\centering
+			 		\includegraphics[scale=0.5]{./imagens/07.png}
+			 		\caption{procedure criada.}
+			 		\label{rota-1}
+			 	\end{figure}
+			 \end{center}
+					
+			insert into vPessoas (nome, tipo) values ('Aluno', 'a');
 					
 					
-				   \begin{verbatim}
 					
-					select * from pagamento ;
-					\end{verbatim}
-					
-						
-					\begin{center}
-						\begin{figure}[H]
-							\centering
-							\includegraphics[scale=0.5]{./imagens/at-04.png}
-							\caption{View selecionada.}
-							\label{rota-1}
-						\end{figure}
-					\end{center}
-					
-						\item
-						 Faça uma view que mostre a média vendida por
-						curso.
-					\begin{verbatim}
-			create or replace view media_vendida as select
-			c.nome_curso Curso, avg(preco) mediaVendida from 
-			cursos c, turmas t where c.cod_curso = t.cod_curso 
-			group by c.nome_curso having avg(preco) > 0;
-					\end{verbatim}
-							\begin{center}
-							\begin{figure}[H]
-								\centering
-								\includegraphics[scale=0.5]{./imagens/at-05.png}
-								\caption{View criada.}
-								\label{rota-1}
-							\end{figure}
-						\end{center}
-							\begin{verbatim}
-					 select * from media_vendida;
-						\end{verbatim}
-						\begin{center}
-							\begin{figure}[H]
-								\centering
-								\includegraphics[scale=0.5]{./imagens/at-06.png}
-								\caption{View selecionada.}
-								\label{rota-1}
-							\end{figure}
-						\end{center}
-				
-								\item
-								Monte uma view que sirva como base para a lista
-								de presenças. Devem constar: nome do aluno,
-								nome do curso, carga horária, nome do instrutor e
-								sala.
-						\begin{verbatim}
-					create or replace view lista_presenca
-					as select a.nome_aluno Aluno, c.nome_curso Curso, c.carga_horaria,
-					i.nome_instrutor, t.sala from alunos a, instrutores i, cursos c, turmas t,
-					historico h where a.matricula = h.matricula and h.cod_turma =
-			t.cod_turma and  i.cod_instrutor = t.cod_instrutor and c.cod_curso = 
-			t.cod_curso order by a.nome_aluno;
-					
-						\end{verbatim}
-						\begin{center}
-							\begin{figure}[H]
-								\centering
-								\includegraphics[scale=0.5]{./imagens/at-07.png}
-								\caption{View criada.}
-								\label{rota-1}
-							\end{figure}
-						\end{center}
-						\begin{verbatim}
-				select * from lista_presenca ;
-						\end{verbatim}
-						\begin{center}
-							\begin{figure}[H]
-								\centering
-								\includegraphics[scale=0.5]{./imagens/at-08.png}
-								\caption{View selecionada.}
-								\label{rota-1}
-							\end{figure}
-						\end{center}
-						
 	\end{enumerate}				
 			
 \end{document}

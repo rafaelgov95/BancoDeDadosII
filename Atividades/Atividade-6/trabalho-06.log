@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.6.24)  18 JUL 2017 20:20
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.6.24)  18 JUL 2017 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**trabalho-05.tex
-(./trabalho-05.tex
+**trabalho-06.tex
+(./trabalho-06.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2.cls
@@ -714,11 +714,11 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 93.
-\trabalho-05@idxfile=\write4
-\openout4 = `trabalho-05.idx'.
+\trabalho-06@idxfile=\write4
+\openout4 = `trabalho-06.idx'.
 
 
-Writing index file trabalho-05.idx 
+Writing index file trabalho-06.idx 
 
 ******************************************************
 Stock height and width: 845.04684pt by 597.50787pt
@@ -739,7 +739,25 @@ Sidefoothsep and sidefootwidth: 7pt and 49pt
 Sidefootvsep and sidefootheight: 13.6pt and 594.32022pt
 ******************************************************
 
-(./trabalho-05.aux
+(./trabalho-06.aux
+
+LaTeX Warning: Label `rota-1' multiply defined.
+
+
+LaTeX Warning: Label `rota-1' multiply defined.
+
+
+LaTeX Warning: Label `rota-1' multiply defined.
+
+
+LaTeX Warning: Label `rota-1' multiply defined.
+
+
+LaTeX Warning: Label `rota-1' multiply defined.
+
+
+LaTeX Warning: Label `rota-1' multiply defined.
+
 
 LaTeX Warning: Label `rota-1' multiply defined.
 
@@ -762,7 +780,7 @@ LaTeX Warning: Label `rota-1' multiply defined.
 LaTeX Warning: Label `rota-1' multiply defined.
 
 )
-\openout1 = `trabalho-05.aux'.
+\openout1 = `trabalho-06.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
 LaTeX Font Info:    ... okay on input line 127.
@@ -851,55 +869,79 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (41.15309pt too wide) in paragraph at lines 149--149
- []\T1/lmtt/m/n/10.95 create or replace view arrecadou as select i.cod_instruto
-r, i.nome_instrutor,[] 
+Overfull \hbox (49.7762pt too wide) in paragraph at lines 149--149
+ []\T1/lmtt/m/n/10.95 SELECT DISTINCT E.ENOME AS NOMES FROM ESTUDANTE E, MATRIC
+ULADO M, DISCIPLINA D[] 
  []
 
 File: ./imagens/at-01.png Graphic file (type QTm)
 <use  "./imagens/at-01.png" >
+Overfull \hbox (14.99635pt too wide) in paragraph at lines 167--167
+ []\T1/lmtt/m/n/10.95 SELECT DISTINCT P.PNome AS PROFESSORES FROM PROF P, DISCI
+PLINA D, AULA A[] 
+ []
+
+
+Overfull \hbox (12.9843pt too wide) in paragraph at lines 168--168
+ []   \T1/lmtt/m/n/10.95 WHERE D.DId = A.DId AND D.PId = P.PId AND A.DiaSemana 
+= 'Sexta-Feira'[] 
+ []
+
 File: ./imagens/at-02.png Graphic file (type QTm)
- <use  "./imagens/at-02.png" > [1
+<use  "./imagens/at-02.png" > [1
 
 ]
 File: ./imagens/at-03.png Graphic file (type QTm)
-
-<use  "./imagens/at-03.png" >
+ <use  "./imagens/at-03.png" >
 File: ./imagens/at-04.png Graphic file (type QTm)
- <use  "./imagens/at-04.png" >
-File: ./imagens/at-05.png Graphic file (type QTm)
 
-<use  "./imagens/at-05.png" > [2]
-File: ./imagens/at-06.png Graphic file (type QTm)
- <use  "./imagens/at-06.png" >
-Overfull \hbox (23.90689pt too wide) in paragraph at lines 255--255
- []\T1/lmtt/m/n/10.95 i.nome_instrutor, t.sala from alunos a, instrutores i, cu
-rsos c, turmas t,[] 
+<use  "./imagens/at-04.png" > [2]
+File: ./imagens/at-05.png Graphic file (type QTm)
+ <use  "./imagens/at-05.png" >
+Overfull \hbox (35.11691pt too wide) in paragraph at lines 240--240
+ []\T1/lmtt/m/n/10.95 WHERE E.ENUM IN(SELECT M1.ENUM FROM MATRICULADO M1, MATRI
+CULADO M2, AULA A1,[] 
  []
 
-File: ./imagens/at-07.png Graphic file (type QTm)
-<use  "./imagens/at-07.png" >
-File: ./imagens/at-08.png Graphic file (type QTm)
- <use  "./imagens/at-08.png" > [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
 
-(./trabalho-05.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 283.
+Overfull \hbox (32.24255pt too wide) in paragraph at lines 241--241
+ []\T1/lmtt/m/n/10.95 AULA A2 WHERE M1.ENUM = M2.ENUM AND M1.Did = A1.Did AND M
+2.DId = A2.Did AND[] 
+ []
+
+File: ./imagens/at-06.png Graphic file (type QTm)
+<use  "./imagens/at-06.png" > [3]
+File: ./imagens/at-08.png Graphic file (type QTm)
+ <use  "./imagens/at-08.png" >
+File: ./imagens/at-09.png Graphic file (type QTm)
+
+<use  "./imagens/at-09.png" >
+File: ./imagens/at-10.png Graphic file (type QTm)
+ <use  "./imagens/at-10.png" > [4]
+File: ./imagens/at-12.png Graphic file (type QTm)
+
+<use  "./imagens/at-12.png" > [5]
+File: ./imagens/at-14.png Graphic file (type QTm)
+ <use  "./imagens/at-14.png" > [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
+
+(./trabalho-06.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 373.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 373.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 373.
  ) 
 Here is how much of TeX's memory you used:
- 15115 strings out of 493068
- 220358 string characters out of 6137720
- 452407 words of memory out of 5000000
- 18871 multiletter control sequences out of 15000+600000
+ 15121 strings out of 493068
+ 220442 string characters out of 6137720
+ 453460 words of memory out of 5000000
+ 18874 multiletter control sequences out of 15000+600000
  24372 words of font info for 32 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 38i,11n,38p,281b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,38p,281b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on trabalho-05.pdf (4 pages).
+Output written on trabalho-06.pdf (6 pages).

@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.6.24)  18 JUL 2017 20:20
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.6.24)  25 JUL 2017 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**trabalho-05.tex
-(./trabalho-05.tex
+**trabalho-07.tex
+(./trabalho-07.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2.cls
@@ -714,11 +714,11 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 93.
-\trabalho-05@idxfile=\write4
-\openout4 = `trabalho-05.idx'.
+\trabalho-07@idxfile=\write4
+\openout4 = `trabalho-07.idx'.
 
 
-Writing index file trabalho-05.idx 
+Writing index file trabalho-07.idx 
 
 ******************************************************
 Stock height and width: 845.04684pt by 597.50787pt
@@ -739,10 +739,7 @@ Sidefoothsep and sidefootwidth: 7pt and 49pt
 Sidefootvsep and sidefootheight: 13.6pt and 594.32022pt
 ******************************************************
 
-(./trabalho-05.aux
-
-LaTeX Warning: Label `rota-1' multiply defined.
-
+(./trabalho-07.aux
 
 LaTeX Warning: Label `rota-1' multiply defined.
 
@@ -762,7 +759,7 @@ LaTeX Warning: Label `rota-1' multiply defined.
 LaTeX Warning: Label `rota-1' multiply defined.
 
 )
-\openout1 = `trabalho-05.aux'.
+\openout1 = `trabalho-07.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
 LaTeX Font Info:    ... okay on input line 127.
@@ -840,7 +837,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 145.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 145.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 148.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 147.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -850,56 +847,50 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (41.15309pt too wide) in paragraph at lines 149--149
- []\T1/lmtt/m/n/10.95 create or replace view arrecadou as select i.cod_instruto
-r, i.nome_instrutor,[] 
- []
-
-File: ./imagens/at-01.png Graphic file (type QTm)
-<use  "./imagens/at-01.png" >
-File: ./imagens/at-02.png Graphic file (type QTm)
- <use  "./imagens/at-02.png" > [1
+File: ./imagens/01.png Graphic file (type QTm)
+ <use  "./imagens/01.png" > [1
 
 ]
-File: ./imagens/at-03.png Graphic file (type QTm)
+File: ./imagens/01.png Graphic file (type QTm)
 
-<use  "./imagens/at-03.png" >
-File: ./imagens/at-04.png Graphic file (type QTm)
- <use  "./imagens/at-04.png" >
-File: ./imagens/at-05.png Graphic file (type QTm)
-
-<use  "./imagens/at-05.png" > [2]
-File: ./imagens/at-06.png Graphic file (type QTm)
- <use  "./imagens/at-06.png" >
-Overfull \hbox (23.90689pt too wide) in paragraph at lines 255--255
- []\T1/lmtt/m/n/10.95 i.nome_instrutor, t.sala from alunos a, instrutores i, cu
-rsos c, turmas t,[] 
+<use  "./imagens/01.png" >
+File: ./imagens/03.png Graphic file (type QTm)
+ <use  "./imagens/03.png" >
+Overfull \hbox (31.38025pt too wide) in paragraph at lines 214--214
+ []\T1/lmtt/m/n/10.95 create or replace function ValorEmDolar(reais in number, 
+cotacao in number)[] 
  []
 
-File: ./imagens/at-07.png Graphic file (type QTm)
-<use  "./imagens/at-07.png" >
-File: ./imagens/at-08.png Graphic file (type QTm)
- <use  "./imagens/at-08.png" > [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+File: ./imagens/02.png Graphic file (type QTm)
+<use  "./imagens/02.png" > [2]
+File: ./imagens/04.png Graphic file (type QTm)
+ <use  "./imagens/04.png" >
+File: ./imagens/05.png Graphic file (type QTm)
 
-(./trabalho-05.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 283.
+<use  "./imagens/05.png" >
+File: ./imagens/06.png Graphic file (type QTm)
+ <use  "./imagens/06.png" > [3]
+File: ./imagens/07.png Graphic file (type QTm)
+
+<use  "./imagens/07.png" > [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
+ (./trabalho-07.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 293.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 293.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
  ) 
 Here is how much of TeX's memory you used:
- 15115 strings out of 493068
- 220358 string characters out of 6137720
- 452407 words of memory out of 5000000
- 18871 multiletter control sequences out of 15000+600000
+ 15113 strings out of 493068
+ 220288 string characters out of 6137720
+ 453404 words of memory out of 5000000
+ 18870 multiletter control sequences out of 15000+600000
  24372 words of font info for 32 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 38i,11n,38p,281b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,38p,281b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on trabalho-05.pdf (4 pages).
+Output written on trabalho-07.pdf (4 pages).

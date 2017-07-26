@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.6.24)  18 JUL 2017 20:20
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.6.24)  18 JUL 2017 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**trabalho-05.tex
-(./trabalho-05.tex
+**trabalho-06.tex
+(./trabalho-06.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2.cls
@@ -714,11 +714,11 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 93.
-\trabalho-05@idxfile=\write4
-\openout4 = `trabalho-05.idx'.
+\trabalho-06@idxfile=\write4
+\openout4 = `trabalho-06.idx'.
 
 
-Writing index file trabalho-05.idx 
+Writing index file trabalho-06.idx 
 
 ******************************************************
 Stock height and width: 845.04684pt by 597.50787pt
@@ -739,7 +739,7 @@ Sidefoothsep and sidefootwidth: 7pt and 49pt
 Sidefootvsep and sidefootheight: 13.6pt and 594.32022pt
 ******************************************************
 
-(./trabalho-05.aux
+(./trabalho-06.aux
 
 LaTeX Warning: Label `rota-1' multiply defined.
 
@@ -762,7 +762,7 @@ LaTeX Warning: Label `rota-1' multiply defined.
 LaTeX Warning: Label `rota-1' multiply defined.
 
 )
-\openout1 = `trabalho-05.aux'.
+\openout1 = `trabalho-06.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
 LaTeX Font Info:    ... okay on input line 127.
@@ -884,7 +884,7 @@ File: ./imagens/at-08.png Graphic file (type QTm)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
 
-(./trabalho-05.aux)
+(./trabalho-06.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 283.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 283.
 
@@ -902,4 +902,4 @@ Here is how much of TeX's memory you used:
  1347 hyphenation exceptions out of 8191
  38i,11n,38p,281b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on trabalho-05.pdf (4 pages).
+Output written on trabalho-06.pdf (4 pages).
