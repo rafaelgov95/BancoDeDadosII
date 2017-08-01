@@ -193,7 +193,7 @@ sumario=tradicional
 					\begin{figure}[H]
 						\centering
 						\includegraphics[scale=0.5]{./imagens/01.png}
-						\caption{procedure criada.}
+						\caption{	create or replace procedure.}
 						\label{rota-1}
 					\end{figure}
 				\end{center}
@@ -217,13 +217,14 @@ sumario=tradicional
 					begin
 					return reais/cotacao;
 					end;
-					\end{verbatim}
 					
+					\end{verbatim}
+
 					\begin{center}
 						\begin{figure}[H]
 							\centering
 							\includegraphics[scale=0.5]{./imagens/02.png}
-							\caption{procedure criada.}
+							\caption{create or replace function.}
 							\label{rota-1}
 						\end{figure}
 					\end{center}
@@ -242,7 +243,7 @@ sumario=tradicional
 							\begin{figure}[H]
 								\centering
 								\includegraphics[scale=0.5]{./imagens/04.png}
-								\caption{procedure criada.}
+								\caption{Create or replace function.}
 								\label{rota-1}
 							\end{figure}
 						\end{center}
@@ -265,28 +266,121 @@ sumario=tradicional
 					   	\begin{figure}[H]
 					   		\centering
 					   		\includegraphics[scale=0.5]{./imagens/06.png}
-					   		\caption{procedure criada.}
+					   		\caption{Select.}
 					   		\label{rota-1}
 					   	\end{figure}
 				   \end{center}
 			 	\item Criar view vPessoas
 			 \begin{verbatim}
-			 create or replace function ValorEmDolar
-			 (reais in number, cotacao in number)
-			 return number
-			 is
-			 begin
-			 return reais/cotacao;
-			 end;
+			 create view vPessoas as
+			 select nome_aluno as nome, 'a' as tipo
+			 from alunos
+			 union
+			 select nome_instrutor, 'i'
+			 from instrutores;
+			 
 			 \end{verbatim}
 			 \begin{center}
 			 	\begin{figure}[H]
 			 		\centering
 			 		\includegraphics[scale=0.5]{./imagens/07.png}
-			 		\caption{procedure criada.}
+			 		\caption{Create view vPessoas.}
 			 		\label{rota-1}
 			 	\end{figure}
 			 \end{center}
+		 
+		 												\begin{verbatim}
+		 create or replace function
+		 exclui_instrutores_cursor_imp
+		 return varchar2
+		 is
+		 begin
+		 delete instrutores
+		 where cod_instrutor not in
+		 (select distinct cod_instrutor from
+		 turmas);
+		 if sql%found then
+		 return ('Foram eliminados: '|| to_char( sql
+		 %rowcount) || ' instrutores');
+		 else
+		 return ('Nenhum instrutor eliminado.');
+		 end if;
+		 end;
+		 \end{verbatim}
+		 \begin{center}
+		 	\begin{figure}[H]
+		 		\centering
+		 		\includegraphics[scale=0.5]{./imagens/36.png}
+		 		\caption{	create or replace function .}
+		 		\label{rota-1}
+		 	\end{figure}
+		 \end{center}
+																			\begin{verbatim}
+					create or replace procedure Classifica_Cursos_Cur_Exp
+					IS
+					cursor ccursos is select nome_curso, preco from cursos;
+					v_nome_curso cursos.nome_curso%type;
+					v_preco cursos.preco%type;
+					v_classifica varchar2(10);
+					BEGIN
+					open ccursos;
+					fetch ccursos into v_nome_curso, v_preco ;
+					while ccursos%found loop
+					if v_preco < 300 then v_classifica := 'Barato';
+					elsif v_preco < 600 then v_classifica := 'Médio';
+					else v_classifica := 'Caro';
+					end if;
+					dbms_output.put_line ('Curso: '|| v_nome_curso || ' é ' ||
+					v_classifica);
+					fetch ccursos into v_nome_curso, v_preco;
+					end loop;
+					close ccursos;
+					END;
+					\end{verbatim}
+					\begin{center}
+						\begin{figure}[H]
+							\centering
+							\includegraphics[scale=0.5]{./imagens/38.png}
+							\caption{	create or replace function .}
+							\label{rota-1}
+						\end{figure}
+					\end{center}
+					
+					\item 	create or replace procedure Class\_Cursos\_Cur\_Exp\_Param
+					\begin{verbatim}
+					create or replace procedure Class_Cursos_Cur_Exp_Param
+					(v_valor_minimo number)
+					IS
+					cursor ccursos (v_valor_minimo in number) is
+					select nome_curso, preco from cursos
+					where preco > v_valor_minimo;
+					v_nome_curso cursos.nome_curso%type;
+					v_preco cursos.preco%type;
+					v_classifica varchar2(10);
+					BEGIN
+					open ccursos (v_valor_minimo);
+					fetch ccursos into v_nome_curso, v_preco;
+					while ccursos%found loop
+					if v_preco < 300 then v_classifica := 'Barato';
+					elsif v_preco < 600 then v_classifica := 'Médio';
+					else v_classifica := 'Caro';
+					end if;
+					fetch ccursos into v_nome_curso, v_preco;
+					end loop;
+					close ccursos;
+					END;
+					
+					\end{verbatim}
+					
+					
+					\begin{center}
+						\begin{figure}[H]
+							\centering
+							\includegraphics[scale=0.5]{./imagens/39.png}
+							\caption{create or replace procedure .}
+							\label{rota-1}
+						\end{figure}
+					\end{center}
 					
 	\end{enumerate}				
 			

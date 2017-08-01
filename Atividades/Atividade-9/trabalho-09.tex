@@ -63,7 +63,7 @@ sumario=tradicional
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Atividade VIII}
+\titulo{Atividade IX}
 \autor{ Rafael Gonçalves de Oliveira Viana}
 \local{Brasil}
 \data{2017}
@@ -143,30 +143,28 @@ sumario=tradicional
 	% página de titulo
 	\maketitle
 	\begin{enumerate}
-		\item Procedure Alimenta Historico Forall
+		\item Exercício do Slide 67
 				\begin{verbatim}
-		
-			 create or replace function ValorEmDolar
-			 (reais in number, cotacao in number)
-			 return number
-			 is
-			 begin
-			 return reais/cotacao;
-			 end;
-			 \end{verbatim}
-			 \begin{center}
-			 	\begin{figure}[H]
-			 		\centering
-			 		\includegraphics[scale=0.5]{./imagens/07.png}
-			 		\caption{procedure criada.}
-			 		\label{rota-1}
-			 	\end{figure}
-			 \end{center}
-					
-			insert into vPessoas (nome, tipo) values ('Aluno', 'a');
-					
-					
-					
+					create or replace procedure Alimenta_Historico_Forall
+					(ultima_turma in number, ultimo_aluno in number)
+					is
+					type tlista is table of number index by binary_integer;
+					lista tlista;
+					begin
+					for j in 1..100 loop
+					lista(j) := j;
+					end loop;
+					delete historico;
+					for i in 1..ultima_turma loop
+					forall j in 1..ultimo_aluno
+					insert into historico (cod_turma, matricula) values (i,lista(j));
+					end loop;
+					commit;
+					END;
+				\end{verbatim}
+	 	\item Exercício do Slide 83
+		\item Exercício do Slide 84
+				
 	\end{enumerate}				
 			
 \end{document}
