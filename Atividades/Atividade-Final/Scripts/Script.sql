@@ -22,14 +22,15 @@ create table policial
     cadastro_criado            date default sysdate);
 
 create table restricao
-   (nome_restricao varchar2(30) constraint restricao_pk primary key,
+   (cod_restricao      number(3)    constraint restricao_pk primary key,
+    nome_restricao     varchar2(30) constraint restricao_nome_nu not null,
     nivel   number(2) constraint restricao_nivel_nu not null,
     modificacao    date default sysdate);
 
 create table calibre
    (cod_calibre      number(3)    constraint calibre_pk primary key,
     nome_calibre     varchar2(30) constraint calibre_nome_nu not null,
-    restricao  constraint calibre_restricao_fk references restricao(nome_restricao),
+    restricao  constraint calibre_restricao_fk references restricao(cod_restricao),
     modificacao    date default sysdate);
 
 create table categoria
@@ -67,19 +68,19 @@ values (1, 'Rafael  Viana', '344-8788','33232-33232','MAJ');
 rem ************************************************************
 rem Insert Restricao
 rem ************************************************************
-insert into restricao ( nome_restricao, nivel)
-values ( 'Civil',1);
-insert into restricao ( nome_restricao, nivel)
-values ( 'Militar',3);
-insert into restricao ( nome_restricao, nivel)
-values ( 'Forças Armadas',5);
-insert into restricao ( nome_restricao, nivel)
-values ( 'Forças Especiais',6);
+insert into restricao (cod_restricao, nome_restricao, nivel)
+values (1, 'Civil',1);
+insert into restricao (cod_restricao, nome_restricao, nivel)
+values (2, 'Militar',3);
+insert into restricao (cod_restricao, nome_restricao, nivel)
+values (3, 'Forças Armadas',5);
+insert into restricao (cod_restricao, nome_restricao, nivel)
+values (4, 'Forças Especiais',6);
 rem ************************************************************
 rem Insert Calibre
 rem ************************************************************
 insert into calibre (cod_calibre,  nome_calibre, restricao)
-values (1, '.45', "Forcas Armadas");
+values (1, '.45', 1);
 rem ************************************************************
 rem Insert Categoria
 rem ************************************************************
