@@ -1,5 +1,9 @@
 rem eliminando tabelas
 rem ************************************************************
+    drop sequence policial_proximo;
+    drop sequence arsenal_proximo;
+    drop sequence arma_proximo;
+    drop sequence municao_proximo;
     drop table arsenal;
     drop table arma;
     drop table categoria;
@@ -11,6 +15,33 @@ rem ************************************************************
 rem criando tabelas
 rem ************************************************************
 
+CREATE SEQUENCE arma_proximo
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  START WITH 1
+  INCREMENT BY 1
+  CACHE 20;
+
+CREATE SEQUENCE municao_proximo
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  START WITH 1
+  INCREMENT BY 1
+  CACHE 20;
+
+CREATE SEQUENCE arsenal_proximo
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  START WITH 1
+  INCREMENT BY 1
+  CACHE 20;
+
+CREATE SEQUENCE policial_proximo
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  START WITH 1
+  INCREMENT BY 1
+  CACHE 20;
 
 create table policial
    (cod_policial      number(3)    constraint policial_pk primary key,
@@ -20,6 +51,7 @@ create table policial
     patente           char(5)      default 'SD' constraint policial_patente_set
                             check (patente in ('SD', 'CB', 'SGT', 'TEN', 'CAP', 'MAJ', 'CRO')),
     cadastro_criado            date default sysdate);
+
 
 create table restricao
    (nome_restricao varchar2(30) constraint restricao_pk primary key,
@@ -62,7 +94,7 @@ create table arsenal
 rem Insert Policial
 rem ************************************************************
 insert into policial (cod_policial, nome_policial, tel_policial, matricula,patente)
-values (1, 'Rafael  Viana', '344-8788','33232-33232','MAJ');
+values (policial_proximo.nextval, 'Rafael  Viana', '344-8788','33232-33232','MAJ');
 rem ************************************************************
 rem Insert Restricao
 rem ************************************************************
@@ -71,32 +103,55 @@ values ( 'Civil',1);
 insert into restricao ( nome_restricao, nivel)
 values ( 'Militar',3);
 insert into restricao ( nome_restricao, nivel)
-values ( 'Forcas Armadas',5);
+values ( 'Forças Armadas',5);
 insert into restricao ( nome_restricao, nivel)
-values ( 'Forcas Especiais',6);
+values ( 'Forças Especiais',6);
 rem ************************************************************
 rem Insert Calibre
 rem ************************************************************
+insert into calibre ( nome_calibre)
+values ('.30');
+insert into calibre ( nome_calibre)
+values ('.50');
+insert into calibre ( nome_calibre)
+values ('380');
+insert into calibre ( nome_calibre)
+values ('12');
 insert into calibre ( nome_calibre)
 values ('.45');
 rem ************************************************************
 rem Insert Categoria
 rem ************************************************************
 insert into categoria ( nome_categoria,restricao)
-values ( 'Fuzil Longo','Forcas Armadas');
+values ( 'Fuzil Longo','Forças Armadas');
+insert into categoria ( nome_categoria,restricao)
+values ( 'Fuzil Baixo','Militar');
+insert into categoria ( nome_categoria,restricao)
+values ( 'Metralhadora','Forças Especiais');
+insert into categoria ( nome_categoria,restricao)
+values ( 'Escopeta','Forças Armadas');
+insert into categoria ( nome_categoria,restricao)
+values ( 'Fuzil Médio','Forças Armadas');
+
 rem ************************************************************
 rem Insert Municao
 rem ************************************************************
 insert into municao (cod_municao,nome_municao,restricao,calibre)
-values (1, 'Expansiva','Forcas Armadas','.45');
+values (municao_proximo.nextval, 'Expansiva','Forcas Armadas','.45');
+insert into municao (cod_municao,nome_municao,restricao,calibre)
+values (municao_proximo.nextval, 'Explosiva','Forcas Armadas','.45');
+insert into municao (cod_municao,nome_municao,restricao,calibre)
+values (municao_proximo.nextval, 'Penetração','Forcas Armadas','.45');
+
+
 rem ************************************************************
 rem Insert Arma
 rem ************************************************************
 insert into arma (cod_arma, nome_arma,categoria,municao,fabricante)
-values (1, 'AK-47','Fuzil Longo',1,'Rusia');
+values (arma_proximo.nextval, 'AK-47policial_proximo.nextval','Fuzil Longo',1,'Rusia');
 rem ************************************************************
 rem Insert Arsenal
 rem ************************************************************
 insert into arsenal(cod_arsenal, cod_policial, cod_arma,valor_arma)
-values (1, 1,1,'50000');
+values (arsenal_proximo.nextval, 1,1,'50000');
 rem ************************************************************
