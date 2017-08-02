@@ -1,3 +1,4 @@
+rem Atividate Banco de Dados II - RafaelViana
 rem eliminando tabelas
 rem ************************************************************
     drop sequence policial_proximo;
