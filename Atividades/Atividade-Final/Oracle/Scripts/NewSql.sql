@@ -137,11 +137,11 @@ rem ************************************************************
 rem Insert Municao
 rem ************************************************************
 insert into municao (cod_municao,nome_municao,restricao,calibre)
-values (municao_proximo.nextval, 'Expansiva','Forcas Armadas','.45');
+values (municao_proximo.nextval, 'Expansiva','Forças Armadas','.45');
 insert into municao (cod_municao,nome_municao,restricao,calibre)
-values (municao_proximo.nextval, 'Explosiva','Forcas Armadas','.45');
+values (municao_proximo.nextval, 'Explosiva','Forças Armadas','.45');
 insert into municao (cod_municao,nome_municao,restricao,calibre)
-values (municao_proximo.nextval, 'Penetração','Forcas Armadas','.45');
+values (municao_proximo.nextval, 'Penetração','Forças Armadas','.45');
 
 
 rem ************************************************************
