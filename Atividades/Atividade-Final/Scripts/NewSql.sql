@@ -27,14 +27,14 @@ create table restricao
     modificacao    date default sysdate);
 
 create table calibre
-   (cod_calibre      number(3)    constraint calibre_pk primary key,
-    nome_calibre     varchar2(30) constraint calibre_nome_nu not null,
+   (nome_calibre     varchar2(30) constraint calibre_nome_nu not null,
     restricao  constraint calibre_restricao_fk references restricao(nome_restricao),
     modificacao    date default sysdate);
 
 create table categoria
-   (cod_categoria    number(3)    constraint categoria_pk primary key,
+   (   
     nome_categoria    varchar2(30) constraint categoria_nome_nu not null,
+    restricao  constraint calibre_restricao_fk references restricao(nome_restricao),
     modificacao    date default sysdate);
 
 create table municao
