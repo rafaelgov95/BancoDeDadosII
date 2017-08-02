@@ -93,7 +93,7 @@ rem ************************************************************
 rem Insert Arma
 rem ************************************************************
 insert into arma (cod_arma, nome_arma,categoria,municao,fabricante)
-values (1, 'AK-47','Fuzil Longo','.45','Rusia');
+values (1, 'AK-47','Fuzil Longo',1,'Rusia');
 rem ************************************************************
 rem Insert Arsenal
 rem ************************************************************
