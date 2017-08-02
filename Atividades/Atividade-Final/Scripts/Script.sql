@@ -1,12 +1,12 @@
 rem eliminando tabelas
 rem ************************************************************
     drop table arsenal;
+    drop table arma;
     drop table categoria;
     drop table municao;
-    drop table arma;
     drop table calibre;
-    drop table policial;
     drop table restricao;
+    drop table policial;
 
 rem criando tabelas
 rem ************************************************************
@@ -78,8 +78,8 @@ values (1, '.45', 1);
 rem ************************************************************
 rem Insert Categoria
 rem ************************************************************
-insert into categoria (cod_categoria,  nome_categoria, restricao)
-values (1, 'Fuzil Longo', 1);
+insert into categoria (cod_categoria, nome_categoria)
+values (1, 'Fuzil Longo');
 rem ************************************************************
 rem Insert Municao
 rem ************************************************************
