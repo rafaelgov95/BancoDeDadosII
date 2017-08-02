@@ -38,7 +38,7 @@ create table categoria
 create table municao
    (cod_municao    number(3)    constraint municao_pk primary key,
     nome_municao    varchar2(30) constraint municao_nome_nu not null,
-    calibre  constraint municao_calibre_fk references calibre(cod_calibre),
+    calibre  constraint municao_calibre_fk references calibre(nome_calibre),
     restricao  constraint municao_restricao_fk references restricao(nome_restricao),
     modificacao    date default sysdate);
 
