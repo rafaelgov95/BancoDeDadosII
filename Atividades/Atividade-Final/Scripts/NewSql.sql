@@ -92,11 +92,11 @@ values (1, 'Expansiva','Forcas Armadas','.45');
 rem ************************************************************
 rem Insert Arma
 rem ************************************************************
-insert into arma (cod_arma, nome_arma,categoria, municao,fabricante)
-values (1, 'AK-47',1,1,'Rusia');
+insert into arma (cod_arma, nome_arma,categoria,municao,fabricante)
+values (1, 'AK-47','Fuzil Longo','.45',1,'Rusia');
 rem ************************************************************
 rem Insert Arsenal
 rem ************************************************************
-insert into arsenal(cod_arsenal,  cod_policial, cod_arma,valor_arma)
+insert into arsenal(cod_arsenal, cod_policial, cod_arma,valor_arma)
 values (1, 1,1,'50000');
 rem ************************************************************
