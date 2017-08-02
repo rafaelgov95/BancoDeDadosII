@@ -27,26 +27,25 @@ create table restricao
     modificacao    date default sysdate);
 
 create table calibre
-   (nome_calibre     varchar2(30) constraint calibre_nome_nu not null,
-    restricao  constraint calibre_restricao_fk references restricao(nome_restricao),
+   (nome_calibre varchar2(20) constraint calibre_pk primary key,
     modificacao    date default sysdate);
 
 create table categoria
-   (   
-    nome_categoria    varchar2(30) constraint categoria_nome_nu not null,
-    restricao  constraint calibre_restricao_fk references restricao(nome_restricao),
+   (nome_categoria varchar2(20) constraint categorio_pk primary key,
+    restricao  constraint categoria_restricao_fk references restricao(nome_restricao),
     modificacao    date default sysdate);
 
 create table municao
    (cod_municao    number(3)    constraint municao_pk primary key,
     nome_municao    varchar2(30) constraint municao_nome_nu not null,
     calibre  constraint municao_calibre_fk references calibre(cod_calibre),
+    restricao  constraint municao_restricao_fk references restricao(nome_restricao),
     modificacao    date default sysdate);
 
 create table arma
    (cod_arma      number(3)    constraint arma_pk primary key,
     nome_arma     varchar2(30) constraint arma_nome_nu not null,
-    categoria constraint arma_categoria_fk references categoria(cod_categoria),
+    categoria constraint arma_categoria_fk references categoria(nome_categoria),
     municao constraint arma_municao_fk references municao(cod_municao),
     fabricante   varchar2(30) constraint arma_fabricante_nome_nu not null,
     modificacao    date default sysdate);
@@ -72,24 +71,24 @@ values ( 'Civil',1);
 insert into restricao ( nome_restricao, nivel)
 values ( 'Militar',3);
 insert into restricao ( nome_restricao, nivel)
-values ( 'Forças Armadas',5);
+values ( 'Forcas Armadas',5);
 insert into restricao ( nome_restricao, nivel)
-values ( 'Forças Especiais',6);
+values ( 'Forcas Especiais',6);
 rem ************************************************************
 rem Insert Calibre
 rem ************************************************************
-insert into calibre (cod_calibre,  nome_calibre, restricao)
-values (1, '.45', "Forcas Armadas");
+insert into calibre ( nome_calibre)
+values ('.45');
 rem ************************************************************
 rem Insert Categoria
 rem ************************************************************
-insert into categoria (cod_categoria, nome_categoria)
-values (1, 'Fuzil Longo');
+insert into categoria ( nome_categoria,restricao)
+values ( 'Fuzil Longo','Forcas Armadas');
 rem ************************************************************
 rem Insert Municao
 rem ************************************************************
-insert into municao (cod_municao,  nome_municao, calibre)
-values (1, 'Expansiva',1);
+insert into municao (cod_municao,nome_municao,restricao,calibre)
+values (1, 'Expansiva','Forcas Armadas','.45');
 rem ************************************************************
 rem Insert Arma
 rem ************************************************************
