@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: mongodb-rafael-viana.aux
+The style file: sbc.bst
+Database file #1: sbc-template.bib
+Too many commas in name 1 of "Marcos Rodrigues Vieira, Josiel Maimone de Figueiredo, Josiel Maimone de Figueiredo, Alvaro Fellipe Mendes Viebrantz" for entry mongodb
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "Marcos Rodrigues Vieira, Josiel Maimone de Figueiredo, Josiel Maimone de Figueiredo, Alvaro Fellipe Mendes Viebrantz" for entry mongodb
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "Marcos Rodrigues Vieira, Josiel Maimone de Figueiredo, Josiel Maimone de Figueiredo, Alvaro Fellipe Mendes Viebrantz" for entry mongodb
+while executing---line 1096 of file sbc.bst
+Warning--empty booktitle in mongodb
+You've used 2 entries,
+            1935 wiz_defined-function locations,
+            482 strings with 4157 characters,
+and the built_in function-call counts, 870 in all, are:
+= -- 87
+> -- 25
+< -- 2
++ -- 8
+- -- 8
+* -- 58
+:= -- 142
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 14
+chr.to.int$ -- 2
+cite$ -- 3
+duplicate$ -- 44
+empty$ -- 70
+format.name$ -- 10
+if$ -- 183
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 6
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 14
+quote$ -- 0
+skip$ -- 32
+stack$ -- 0
+substring$ -- 56
+swap$ -- 10
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 1
+while$ -- 7
+width$ -- 0
+write$ -- 28
+(There were 3 error messages)
