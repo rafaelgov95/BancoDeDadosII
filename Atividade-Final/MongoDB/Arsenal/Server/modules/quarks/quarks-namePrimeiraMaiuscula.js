@@ -1,1 +1,0 @@
-module.exports=(v) => v.toLowerCase().replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });

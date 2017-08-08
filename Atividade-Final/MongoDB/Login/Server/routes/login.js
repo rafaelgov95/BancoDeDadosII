@@ -33,7 +33,7 @@ router.post('/criar', function (req, res, next) {
 
 router.post('/logar', function (req, res, next) {
   const body = req.body;
-  modelo.find((err, data) => {
+  model.logar(body,(err, data) => {
     callback(err, data, res)
   });
 });

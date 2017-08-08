@@ -1,1 +1,0 @@
-module.exports=(v)=> (v.length > 4) & (v.length<=25)
