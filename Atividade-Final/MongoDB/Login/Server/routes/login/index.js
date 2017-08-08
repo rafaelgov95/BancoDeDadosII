@@ -1,4 +1,3 @@
-
 'use strict'
 var express = require('express');
 var jwt = require('jsonwebtoken')
@@ -62,14 +61,12 @@ router.post('/logar', (req, res, next) => {
         });
 
       });
-
-
     });
   });
 
 });
 
-router.post('/delete', (req, res, next) => {
+router.delete('/delete', (req, res, next) => {
   const body = req.body;
   model.remove(body, (err, data) => {
     callback(err, data, res)
