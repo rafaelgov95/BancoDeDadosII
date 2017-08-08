@@ -19,9 +19,6 @@ module.exports = function(req, res, next) {
 
     } else {
         return res.status(403).render('./../views/error.pug',{ 
-            error:'Esse é o erro',
-            error_dois:'Erro 2',
-            success: false,
             message: 'Não há token.'
         });
     }

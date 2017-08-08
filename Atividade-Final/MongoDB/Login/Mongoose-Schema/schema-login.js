@@ -1,10 +1,11 @@
 const mg = require('mongoose')
 var bcrypt = require('bcrypt-nodejs');
 
+
 const login_schema = new mg.Schema({
     email: String,
     passwd: String,
-    accessToken: { type: String },
+    accessToken: [{ type: String }],
 })
 
 
@@ -27,11 +28,6 @@ login_schema.methods.verifica_passwd = function(passwd, next) {
         next(isMatch);
     });
 };
-
-// login_schema.methods.verifica_token = function(token, next) {
-//     this.accessToken=token;
-//     next(true)
-// };
 
 login_schema.statics.save_token = function(err,cb) {
     console.log('entro aqui')

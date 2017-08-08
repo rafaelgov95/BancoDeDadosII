@@ -1,4 +1,5 @@
 
+'use strict'
 var express = require('express');
 var jwt = require('jsonwebtoken')
 var mongodb = require('mongoose');
@@ -40,9 +41,7 @@ router.post('/logar', (req, res, next) => {
   var passwd = req.body.passwd || '';
   if (email == '' || passwd == '') {
     return res.sendStatus(401);
-  }
-  console.log(email);
-  console.log(passwd);
+  };
   model.findOne({ email: email }, function (err, user) {
     if (err || user == null) {
       return res.sendStatus(401)
