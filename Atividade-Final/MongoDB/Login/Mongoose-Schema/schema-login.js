@@ -28,8 +28,14 @@ login_schema.methods.verifica_passwd = function(passwd, next) {
     });
 };
 
-// login_schema.statics.findByName = function(email, cb) {
-//   return this.find({ name: email }, cb);
+// login_schema.methods.verifica_token = function(token, next) {
+//     this.accessToken=token;
+//     next(true)
 // };
+
+login_schema.statics.save_token = function(err,cb) {
+    console.log('entro aqui')
+  return this.save({ accessToken: accessToken }, cb);
+};
 
 module.exports = login_schema;
