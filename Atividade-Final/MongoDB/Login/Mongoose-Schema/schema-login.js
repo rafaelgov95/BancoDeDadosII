@@ -5,7 +5,7 @@ var bcrypt = require('bcrypt-nodejs');
 const login_schema = new mg.Schema({
     email: String,
     passwd: String,
-    accessToken: [{ type: String }],
+    accessToken: [{ type: String  }],
 })
 
 

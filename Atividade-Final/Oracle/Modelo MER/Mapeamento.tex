@@ -63,7 +63,7 @@ sumario=tradicional
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Atividade IX}
+\titulo{Mapeamento Arsenal}
 \autor{ Rafael Gonçalves de Oliveira Viana}
 \local{Brasil}
 \data{2017}
@@ -117,6 +117,8 @@ sumario=tradicional
 
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
+\usepackage{multicol}
+
 
 % Espaçamento simples
 \SingleSpacing
@@ -142,52 +144,75 @@ sumario=tradicional
 	%---
 	% página de titulo
 	\maketitle
-
+\begin{multicols}{2}
 	\begin{enumerate}
-		\item Exercício do Slide 67
-			\begin{enumerate}
-			\item Qual será o i ao final das inserções?
+	
+
+
+	\item Policial
 			
-				R:	8
-			\item Quantos blocos estarão com somente
-			um registro?
-			
-				R:	1
-			\item Qual o bloco mais apontado pelo array
-			de depósitos?
+	 \begin{verbatim}
+	policial
+			(cod_policial,
+			nome_policial,
+			tel_policial, 
+			matricula,  
+			patente,
+			policial_patente_set,
+			cadastro_criado)
+		\end{verbatim}
 		
-			 	R:	bloco dos que começam com 10, bloco 2 b
-			 		\end{enumerate}
-	 	\item Exercício do Slide 83
-	 		\begin{enumerate}
-	 		\item g a j forem inseridos
-	 		nos depósitos 0 a 3,
-	 		resp?
-	 		
-	 		R:	
-	 		\item a e b forem eliminados?
-	 		
-	 		R:	
-	 		\item  k a n forem inseridos
-	 		nos depósitos 0 a 3,
-	 		resp?
-	 		
-	 		R:
-	 		\item  c e d forem eliminadoss?
-	 		
-	 		R:	
-		 	\end{enumerate}
-		\item Exercício do Slide 84
-				\begin{enumerate}
-				\item Considere a tabela de hash abaixo.
-				O que acontece com a inclusão de g,
-				dado que h(g) = 3 ?
-				
-				R:	
+	\item Restrição
+		\begin{verbatim}
+		restricao
+		(nome_restricao, 
+		nivel,
+		modificacao)
+		
+			\end{verbatim}
 			
-			
-			\end{enumerate}
-				
-	\end{enumerate}				
-			
+			\item Calibre	
+			\begin{verbatim}
+		 calibre
+		(nome_calibre
+		modificacao) 
+			\end{verbatim}
+			\item Categoria
+					\begin{verbatim}
+		 categoria
+		(nome_categoria,
+		restricao,
+		modificacao)
+	\end{verbatim}
+	
+	  		\item Munição
+			\begin{verbatim}
+		 municao
+		(cod_municao, 
+		nome_municao,
+		calibre, 
+		modificacao)
+			\end{verbatim}
+					\item Arma
+				\begin{verbatim}
+		arma
+		(cod_arma,  
+		nome_arma,  
+		categoria, 
+		municao, 
+		fabricante,   
+		modificacao ) 
+		\end{verbatim}	
+		\item Arsenal
+		
+		\begin{verbatim}
+		arsenal
+		(cod_arsenal,
+		cod_policial,
+		cod_arma,
+		valor_arma ,
+		cadastro_criado)
+		 \end{verbatim}
+		\end{enumerate}				
+	\end{multicols}
 \end{document}
