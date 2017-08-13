@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema elementFormDefault="qualified"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Arsenal" type="ArsenalType" />
+
+    <xsd:complexType name="ArsenalType">
+        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="Policial" type="ArmaType" />
+            <xsd:element name="Arma" type="ArmaType" />
+            <xsd:element name="valor_arma" type="xsd:number" />
+            <xsd:element name="cadastro_criado" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+  <xsd:complexType name="ArmaType">
+        <xsd:sequence>
+            <xsd:element name="nome_arma" type="xsd:string" />
+            <xsd:element name="categoria" type="categoria" />
+            <xsd:element name="municao" type="municao" />
+            <xsd:element name="fabricante" type="xsd:string" />
+            <xsd:element name="modificacao" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="categoria">
+        <xsd:sequence>
+            <xsd:element name="nome_categoria" type="xsd:string" />
+            <xsd:element name="modificacao" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+      <xsd:complexType name="municao">
+        <xsd:sequence>
+            <xsd:element name="nome_municao" type="xsd:string" />
+            <xsd:element name="calibre" type="xsd:string" />
+            <xsd:element name="modificacao" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+
+     <xsd:complexType name="calibre">
+        <xsd:sequence>
+            <xsd:element name="nome_calibre" type="xsd:string" />
+            <xsd:element name="restricao" type="xsd:string" />
+            <xsd:element name="modificacao" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+   <xsd:complexType name="restricao">
+        <xsd:sequence>
+            <xsd:element name="nome_restricao" type="xsd:string" />
+            <xsd:element name="nivel" type="xsd:string" />
+            <xsd:element name="modificacao" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+       <xsd:complexType name="policial">
+        <xsd:sequence>
+            <xsd:element name="nome_policial" type="xsd:string" />            
+            <xsd:element name="cod_policial" type="xsd:string" />
+            <xsd:element name="matricula" type="xsd:string" />
+            <xsd:element name="patente" type="xsd:string" />
+            <xsd:element name="cadastro_criado" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
