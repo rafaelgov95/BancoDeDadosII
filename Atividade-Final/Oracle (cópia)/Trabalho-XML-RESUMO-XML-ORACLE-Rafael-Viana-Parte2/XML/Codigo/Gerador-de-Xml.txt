@@ -1,0 +1,30 @@
+select xmlelement("arsenal"
+       ,xmlattributes(arsenal.cod_arsenal as codigo)
+       ,xmlforest(arsenal.cod_arsenal as codigo)
+       ,xmlelement("policial"
+                          ,(select xmlagg (xmlconcat(
+                          xmlelement("nome",policial.nome_policial)
+                          ,xmlelement("tel",policial.tel_policial)
+                          ,xmlelement("matricula",policial.matricula)
+                          ,xmlelement("cadastro_criado",policial.cadastro_criado)
+                                                      )
+                                            )
+                               from policial 
+                              where arsenal.cod_policial = policial.cod_policial)
+                            )
+       ,xmlelement("arma"
+                          ,(select xmlagg (xmlconcat(
+                          xmlelement("nome_arma",arma.nome_arma)
+                          ,xmlelement("categoria",arma.categoria)
+                          ,xmlelement("municao",arma.municao)
+                           ,xmlelement("fabricante",arma.fabricante)
+                          ,xmlelement("modificacao",arma.modificacao)
+                                                      )
+                                            )
+                               from  arma, policial
+                              where policial.cod_arma = arma.cod_arma )
+                            )
+        )
+        ,  xmlelement("valor_arma",arsenal.valor_arma)
+        ,  xmlelement("cadastro_criado",arsenal.cadastro_criado)     
+from  arsenal ;
